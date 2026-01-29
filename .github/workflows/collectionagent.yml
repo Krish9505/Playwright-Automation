@@ -1,0 +1,48 @@
+name: Playwright Collectionagent
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 11.40 * * *" # Runs every day at 11:30 AM UTC
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        # This step checks out the repository code so that the workflow can access it.
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+        # This step sets up Node.js version 18.
+
+      - name: Install dependencies
+        run: npm ci
+        # Installs dependencies using npm ci for a clean install.
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+        # Installs Playwright browsers and required system dependencies.
+
+      - name: Run Playwright tests
+        run: npx playwright test tests/collectionagent.spec.js --reporter=html --output=playwright-report
+        # Runs only collectionagent test and generates HTML report.
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+        # Uploads Playwright HTML report as artifact.
+
