@@ -33,7 +33,7 @@ DailycashieringData:
 {
   NTCID: '1870826223862C',
   Agreementnuam: 'GAL8845318',
-  Amount: '100',
+  Amount: '10',
   Amountrecieved: '200',
   paymode: 'Cash',
   sourcefund: 'test'
