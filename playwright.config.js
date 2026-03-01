@@ -31,7 +31,7 @@ module.exports = defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'getBaseURL()',
     /* Collect trace for all tests. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: 'off',
     video: 'off',
     screenshot: 'on',
   },
