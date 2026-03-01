@@ -31,7 +31,7 @@ collectionagentData:
 
 DailycashieringData:
 {
-  NTCID: '1870826223862C',
+  NTCID: '1870826223863C',
   Agreementnuam: 'GAL8845318',
   Amount: '10',
   Amountrecieved: '200',

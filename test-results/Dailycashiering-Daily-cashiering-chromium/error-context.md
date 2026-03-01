@@ -36,6 +36,31 @@
               - button: Make Repayment
               - button:
                 - img
+      - generic:
+        - generic:
+          - generic:
+            - heading [level=2]: Daily Cashiering
+            - button:
+              - img
+          - generic:
+            - generic:
+              - generic:
+                - generic: NIC Id
+                - textbox: 1870826223862C
+              - generic:
+                - generic: First Name
+                - textbox
+              - generic:
+                - generic: Last Name
+                - textbox
+              - generic:
+                - generic: Loan Application Number (LOS)
+                - textbox
+              - generic:
+                - generic: Loan Account Number
+                - textbox
+            - generic:
+              - button: Search
     - generic:
       - generic:
         - generic:
@@ -2043,62 +2068,13 @@
                         - cell: 2026-02-22
                         - cell: Sealed bag banking
   - region "Notifications alt+T"
-  - dialog:
-    - generic:
-      - heading [level=2]: Collection Agent
-      - button:
-        - img
-    - generic:
-      - generic:
-        - generic:
-          - text: Amount *
-          - textbox:
-            - /placeholder: Enter amount
-            - text: "100"
-        - generic:
-          - text: Collection Agent *
-          - combobox [expanded]:
-            - generic: Select collection agent
-            - img
-          - combobox
-        - generic:
-          - text: Collection Agent ID *
-          - textbox [disabled]:
-            - /placeholder: Collection Agent ID
-        - generic:
-          - text: Payment Mode *
-          - combobox:
-            - generic: Select payment mode
-            - img
-          - combobox
-        - generic:
-          - text: Product *
-          - combobox:
-            - generic: Select product
-            - img
-          - combobox
-      - generic:
-        - button: Cancel
-        - button: Submit
-  - listbox [ref=e2]:
-    - option "vapttest" [active] [ref=e3]:
-      - generic [ref=e5]: vapttest
-    - option "Jean Claude Parsonee" [ref=e6]:
-      - generic [ref=e8]: Jean Claude Parsonee
-    - option "Georgie Tan Hoo" [ref=e9]:
-      - generic [ref=e11]: Georgie Tan Hoo
-    - option "Dhan Bhoobun" [ref=e12]:
-      - generic [ref=e14]: Dhan Bhoobun
-    - option "Jumangall Seewan" [ref=e15]:
-      - generic [ref=e17]: Jumangall Seewan
-    - option "Jean Francois Augustin" [ref=e18]:
-      - generic [ref=e20]: Jean Francois Augustin
-    - option "Sunil Gopaul" [ref=e21]:
-      - generic [ref=e23]: Sunil Gopaul
-    - option "Jean Chrisnel Louis" [ref=e24]:
-      - generic [ref=e26]: Jean Chrisnel Louis
-    - option "Koosraj Ramasawmy" [ref=e27]:
-      - generic [ref=e29]: Koosraj Ramasawmy
-    - option "Benjamin Francois" [ref=e30]:
-      - generic [ref=e32]: Benjamin Francois
+  - dialog "Search Results" [ref=e2]:
+    - heading "Search Results" [level=2] [ref=e4]
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - heading "No Record Found" [level=3] [ref=e9]
+      - paragraph [ref=e10]: We couldn't find any matching records. Please try with different search criteria.
+    - button "Close" [active] [ref=e11] [cursor=pointer]:
+      - img [ref=e12]
+      - generic [ref=e15]: Close
 ```
