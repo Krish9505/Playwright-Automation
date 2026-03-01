@@ -7,7 +7,7 @@ exports.users= {
 
 ManualPaymentData:
 {
-  Enteramount: '100',
+  Enteramount: '1000',
   reason: 'Returned Cheque',
   paymode: 'Cash',
   payername: 'ravi',
