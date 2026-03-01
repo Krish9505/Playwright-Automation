@@ -1,7 +1,12 @@
 // @ts-check
-require('dotenv').config({ path: './utils/.env' });
+// require('dotenv').config({ path: './utils/.env' });
+
+// require('dotenv').config({
+//   path: path.resolve(__dirname, 'utils/.env'),
+// });
 
 const { defineConfig, devices } = require('@playwright/test');
+const path = require('path/win32');
 
 /**
  * @see https://playwright.dev/docs/intro
@@ -27,7 +32,7 @@ module.exports = defineConfig({
     // baseURL: 'getBaseURL()',
     /* Collect trace for all tests. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
-    video: 'on',
+    video: 'off',
     screenshot: 'on',
   },
 
