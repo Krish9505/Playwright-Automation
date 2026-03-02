@@ -34,18 +34,18 @@ DailycashieringData:
   NTCID: '1870826223863C',
   Agreementnuam: 'GAL8845318',
   Amount: '10',
-  Amountrecieved: '200',
+  Amountrecieved: '100',
   paymode: 'Cash',
-  sourcefund: 'test'
+  sourcefund: 'testtttt'
 },
 
 otherreceiptsData:
 {
-  Enteramount: '10',
+  Enteramount: '100',
   receiptnum: '2',
-  range: '2',
+  range: '3',
   paymode: 'cheque',
-  bankname: 'BCP BANK',
+  bankname: 'BCP BAK',
   payername: 'krishna',
   remarks: 'test',
   chequenumber: '12345',
